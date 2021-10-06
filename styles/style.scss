@@ -1,0 +1,108 @@
+@import './_colors.sass';
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: $lightDark;
+    font-family: 'Open Sans', sans-serif;
+}
+
+@mixin flex($direction, $justify, $align){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+header{
+    div{
+        @include flex(row, space-between, center);
+        padding: 1rem 2rem;
+    }
+    h1{
+        font-size: 64px;
+        font-family: 'Open Sans';
+        font-weight: 700;
+        font-style: italic;
+        span{
+            color: $lightOutline;
+        }
+    }
+
+    button{
+        display: inline-block;
+        background: $lightOutline;
+        color: $lightLight;
+        font-weight: 600;
+        font-size: 20px;
+        font-style: italic;
+        padding: .5rem 1rem;
+        border-radius: 14px;
+        border: none;
+        cursor: pointer;
+    }
+    hr{
+        height: 2px;
+        background: $lightDark;
+    }
+}
+
+section{
+    @include flex(column, center, center);
+    width: 60%;
+    margin: 2rem auto;
+    min-height: 60vh;
+    box-shadow: 0px 0px 5px 5px lightgrey;
+
+    > *{
+        margin-bottom: 3rem;
+    }
+
+    form{
+        width: 100%;
+        @include flex(row, center, space-between);
+
+        #range,
+        #options{
+            @include flex(column, center, space-between);
+            margin: 2rem;
+
+        }
+        #range{
+            small{
+                margin-bottom: 1rem;
+            }
+            output{
+                align-self: center;
+            }
+        }
+        #options > div{
+            @include flex(row, space-between, center);
+            
+            label{
+                margin-right: 1rem;
+            }
+        }
+        input[type=range]{
+            width: 300px;
+
+            &::-moz-range-thumb{
+                background: $lightOutline;
+                border: none;
+                scale: 150%; 
+            }
+
+            &::-moz-range-track{
+                background: $lightDark;
+                height: 5px;
+            }
+        }
+    }
+}
+
+footer{
+    @include flex(row, center, center);
+}

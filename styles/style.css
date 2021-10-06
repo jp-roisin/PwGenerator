@@ -1,0 +1,178 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #003049;
+  font-family: 'Open Sans', sans-serif;
+}
+
+header div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 2rem;
+}
+
+header h1 {
+  font-size: 64px;
+  font-family: 'Open Sans';
+  font-weight: 700;
+  font-style: italic;
+}
+
+header h1 span {
+  color: #D62828;
+}
+
+header button {
+  display: inline-block;
+  background: #D62828;
+  color: #fff;
+  font-weight: 600;
+  font-size: 20px;
+  font-style: italic;
+  padding: .5rem 1rem;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+header hr {
+  height: 2px;
+  background: #003049;
+}
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60%;
+  margin: 2rem auto;
+  min-height: 60vh;
+  -webkit-box-shadow: 0px 0px 5px 5px lightgrey;
+          box-shadow: 0px 0px 5px 5px lightgrey;
+}
+
+section > * {
+  margin-bottom: 3rem;
+}
+
+section form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: space-between;
+      -ms-flex-align: space-between;
+          align-items: space-between;
+}
+
+section form #range,
+section form #options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: space-between;
+      -ms-flex-align: space-between;
+          align-items: space-between;
+  margin: 2rem;
+}
+
+section form #range small {
+  margin-bottom: 1rem;
+}
+
+section form #range output {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+section form #options > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section form #options > div label {
+  margin-right: 1rem;
+}
+
+section form input[type=range] {
+  width: 300px;
+}
+
+section form input[type=range]::-moz-range-thumb {
+  background: #D62828;
+  border: none;
+  scale: 150%;
+}
+
+section form input[type=range]::-moz-range-track {
+  background: #003049;
+  height: 5px;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=style.css.map */
