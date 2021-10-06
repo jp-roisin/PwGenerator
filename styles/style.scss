@@ -18,6 +18,7 @@
 }
 
 header{
+    background: $lightDark;
     div{
         @include flex(row, space-between, center);
         padding: 1rem 2rem;
@@ -27,6 +28,7 @@ header{
         font-family: 'Open Sans';
         font-weight: 700;
         font-style: italic;
+        color: $lightLight;
         span{
             color: $lightOutline;
         }
@@ -44,10 +46,6 @@ header{
         border: none;
         cursor: pointer;
     }
-    hr{
-        height: 2px;
-        background: $lightDark;
-    }
 }
 
 section{
@@ -55,22 +53,36 @@ section{
     width: 60%;
     margin: 2rem auto;
     min-height: 60vh;
-    box-shadow: 0px 0px 5px 5px lightgrey;
 
     > *{
         margin-bottom: 3rem;
     }
 
-    form{
-        width: 100%;
-        @include flex(row, center, space-between);
+    h2{
+        font-size: 46px;
+        text-align: center;
+        font-weight: 800;
+    }
+
+    #parameters{
+        width: 60%;
+        box-shadow: 0 0 15px 5px lightgray;
+        
+        h3{
+            text-align: center;
+            margin: 1rem;
+        }
+
+        .flex{
+            @include flex(row, center, space-around);
+        }
 
         #range,
         #options{
             @include flex(column, center, space-between);
             margin: 2rem;
+        } 
 
-        }
         #range{
             small{
                 margin-bottom: 1rem;
@@ -86,6 +98,7 @@ section{
                 margin-right: 1rem;
             }
         }
+
         input[type=range]{
             width: 300px;
 
@@ -101,8 +114,34 @@ section{
             }
         }
     }
+
+    #output{
+        width: 60%;
+        box-shadow: 0 0 15px 5px lightgray;
+
+        form{
+            display: grid;
+            grid-template-columns: 8fr 1fr 1fr;
+            *{
+                height: 60px;
+            }
+    
+            input{
+                border: none;
+            }
+            button{
+                border: none;
+                background: $lightLight;
+            }
+        }
+    }
 }
 
 footer{
-    @include flex(row, center, center);
+    position: absolute;
+    width: 100%;
+    bottom: 3rem;
+    p{
+        text-align: center;
+    }
 }

@@ -9,43 +9,50 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/83f4286022.js" crossorigin="anonymous"></script>
+
+    
     <body>
     <header>
         <div>
             <h1><span>JP</span>assword</h1>
             <button id="theme">Themes</button>
         </div>
-        <hr>
     </header>
-
+    
     <section>
-        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit!</h2>
-        <form action="">
-            <div id="options">
-                <div>
-                    <label for="caps">Majuscules</label>
-                    <input type="checkbox" name="caps">
+        <h2>Générez un mot de passe sécurisé</h2>
+        
+        <form action="" id="parameters">
+            <h3>Custom your parameters</h3>
+            <hr>
+            <div class="flex">
+                <div id="options">
+                    <div>
+                        <label for="caps">Majuscules</label>
+                        <input type="checkbox" name="caps">
+                    </div>
+                    <div>
+                        <label for="numbers">Chiffres</label>
+                        <input type="checkbox" name="numbers">
+                    </div>
+                    <div>
+                        <label for="special">Symboles</label>
+                        <input type="checkbox" name="special">
+                    </div>
                 </div>
-                <div>
-                    <label for="numbers">Chiffres</label>
-                    <input type="checkbox" name="numbers">
+                <div id="range">
+                    <small>Logueur du mot de passe :</small>
+                    <input type="range" value="12" min="1" max="50" oninput="this.nextElementSibling.value = this.value">
+                    <output>12</output>
                 </div>
-                <div>
-                    <label for="special">Symboles</label>
-                    <input type="checkbox" name="special">
-                </div>
-            </div>
-            <div id="range">
-                <small>Logueur du mot de passe :</small>
-                <input type="range" value="12" min="1" max="50" oninput="this.nextElementSibling.value = this.value">
-                <output>12</output>
             </div>
         </form>
-        <div class="output">
+        <div id="output">
             <form action="">
-                <input type="text">
+                <input output="text">
                 <button>Copy</button>
-                <button>Reload</button>
+                <button>Refresh</button>
             </form>
         </div>
     </section>

@@ -9,6 +9,10 @@
   font-family: 'Open Sans', sans-serif;
 }
 
+header {
+  background: #003049;
+}
+
 header div {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -31,6 +35,7 @@ header h1 {
   font-family: 'Open Sans';
   font-weight: 700;
   font-style: italic;
+  color: #fff;
 }
 
 header h1 span {
@@ -50,11 +55,6 @@ header button {
   cursor: pointer;
 }
 
-header hr {
-  height: 2px;
-  background: #003049;
-}
-
 section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -72,16 +72,30 @@ section {
   width: 60%;
   margin: 2rem auto;
   min-height: 60vh;
-  -webkit-box-shadow: 0px 0px 5px 5px lightgrey;
-          box-shadow: 0px 0px 5px 5px lightgrey;
 }
 
 section > * {
   margin-bottom: 3rem;
 }
 
-section form {
-  width: 100%;
+section h2 {
+  font-size: 46px;
+  text-align: center;
+  font-weight: 800;
+}
+
+section #parameters {
+  width: 60%;
+  -webkit-box-shadow: 0 0 15px 5px lightgray;
+          box-shadow: 0 0 15px 5px lightgray;
+}
+
+section #parameters h3 {
+  text-align: center;
+  margin: 1rem;
+}
+
+section #parameters .flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -92,13 +106,13 @@ section form {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: space-between;
-      -ms-flex-align: space-between;
-          align-items: space-between;
+  -webkit-box-align: space-around;
+      -ms-flex-align: space-around;
+          align-items: space-around;
 }
 
-section form #range,
-section form #options {
+section #parameters #range,
+section #parameters #options {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -115,17 +129,17 @@ section form #options {
   margin: 2rem;
 }
 
-section form #range small {
+section #parameters #range small {
   margin-bottom: 1rem;
 }
 
-section form #range output {
+section #parameters #range output {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
 }
 
-section form #options > div {
+section #parameters #options > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -141,38 +155,58 @@ section form #options > div {
           align-items: center;
 }
 
-section form #options > div label {
+section #parameters #options > div label {
   margin-right: 1rem;
 }
 
-section form input[type=range] {
+section #parameters input[type=range] {
   width: 300px;
 }
 
-section form input[type=range]::-moz-range-thumb {
+section #parameters input[type=range]::-moz-range-thumb {
   background: #D62828;
   border: none;
   scale: 150%;
 }
 
-section form input[type=range]::-moz-range-track {
+section #parameters input[type=range]::-moz-range-track {
   background: #003049;
   height: 5px;
 }
 
+section #output {
+  width: 60%;
+  -webkit-box-shadow: 0 0 15px 5px lightgray;
+          box-shadow: 0 0 15px 5px lightgray;
+}
+
+section #output form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 8fr 1fr 1fr;
+      grid-template-columns: 8fr 1fr 1fr;
+}
+
+section #output form * {
+  height: 60px;
+}
+
+section #output form input {
+  border: none;
+}
+
+section #output form button {
+  border: none;
+  background: #fff;
+}
+
 footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  position: absolute;
+  width: 100%;
+  bottom: 3rem;
+}
+
+footer p {
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
