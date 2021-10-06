@@ -95,6 +95,13 @@ section #parameters h3 {
   margin: 1rem;
 }
 
+section #parameters hr {
+  background: #003049;
+  height: 2px;
+  width: 80%;
+  margin: 0 auto;
+}
+
 section #parameters .flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -174,10 +181,16 @@ section #parameters input[type=range]::-moz-range-track {
   height: 5px;
 }
 
+section #parameters input[type=checkbox]:checked {
+  scale: 150%;
+  color: red;
+}
+
 section #output {
   width: 60%;
   -webkit-box-shadow: 0 0 15px 5px lightgray;
           box-shadow: 0 0 15px 5px lightgray;
+  border-radius: 5px;
 }
 
 section #output form {

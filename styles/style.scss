@@ -73,6 +73,12 @@ section{
             margin: 1rem;
         }
 
+        hr{
+            background: $lightDark;
+            height: 2px;
+            width: 80%;
+            margin: 0 auto;
+        }
         .flex{
             @include flex(row, center, space-around);
         }
@@ -113,11 +119,17 @@ section{
                 height: 5px;
             }
         }
+        
+        input[type=checkbox]:checked{
+            scale: 150%;
+            color: red;
+        }
     }
 
     #output{
         width: 60%;
         box-shadow: 0 0 15px 5px lightgray;
+        border-radius: 5px;
 
         form{
             display: grid;
