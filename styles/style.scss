@@ -1,12 +1,16 @@
-@import './_colors.sass';
-
+:root{
+    --dark: #003049;
+    --light: #fff;
+    --outline: #D62828;
+    --grey: #c3c3c3;
+}
 *,
 *::after,
 *::before{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: $lightDark;
+    color: var(--dark);
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -17,8 +21,12 @@
     align-items: $align;
 }
 
+body{
+    background: var(--light);
+}
+
 header{
-    background: $lightDark;
+    background: #003049;
     div{
         @include flex(row, space-between, center);
         padding: 1rem 2rem;
@@ -28,24 +36,36 @@ header{
         font-family: 'Open Sans';
         font-weight: 700;
         font-style: italic;
-        color: $lightLight;
+        color: #fff;
         span{
-            color: $lightOutline;
+            color: #D62828;
         }
     }
 
     button{
-        display: inline-block;
-        background: $lightOutline;
-        color: $lightLight;
-        font-weight: 600;
-        font-size: 20px;
-        font-style: italic;
+        background: var(--outline);
         padding: .5rem 1rem;
-        border-radius: 14px;
+        border-radius: 10px;
         border: none;
         cursor: pointer;
     }
+    #light{
+        display: none;
+    }
+    #dark::after,
+    #light::after{
+        color: #fff;
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        font-size: 30px;
+    }
+    #dark::after{
+        content: '\f186'; 
+    }
+    #light::after{
+        content: '\f185';
+    }
+
 }
 
 section{
@@ -66,7 +86,7 @@ section{
 
     #parameters{
         width: 60%;
-        box-shadow: 0 0 15px 5px lightgray;
+        box-shadow: 0 0 15px 5px var(--grey);
         
         h3{
             text-align: center;
@@ -74,7 +94,7 @@ section{
         }
 
         hr{
-            background: $lightDark;
+            background: var(--dark);
             height: 2px;
             width: 80%;
             margin: 0 auto;
@@ -99,6 +119,7 @@ section{
         }
         #options > div{
             @include flex(row, space-between, center);
+            margin-bottom: 1rem;
             
             label{
                 margin-right: 1rem;
@@ -109,26 +130,26 @@ section{
             width: 300px;
 
             &::-moz-range-thumb{
-                background: $lightOutline;
+                background: var(--outline);
                 border: none;
                 scale: 150%; 
             }
 
             &::-moz-range-track{
-                background: $lightDark;
+                background: var(--dark);
                 height: 5px;
             }
         }
-        
-        input[type=checkbox]:checked{
-            scale: 150%;
-            color: red;
+        input[type=checkbox]{
+            cursor: pointer;
+            width: 20px;
+            height: 20px;
         }
     }
 
     #output{
         width: 60%;
-        box-shadow: 0 0 15px 5px lightgray;
+        box-shadow: 0 0 15px 5px var(--grey);
         border-radius: 5px;
 
         form{
@@ -142,8 +163,22 @@ section{
                 border: none;
             }
             button{
+                background: var(--light);
                 border: none;
-                background: $lightLight;
+                cursor: pointer;
+            }
+            #copy::after,
+            #reload::after{
+                font-family: 'Font Awesome 5 Free';
+                font-weight: 900;
+                font-size: 30px;
+            }
+
+            #copy::after{
+                content: '\f24d';
+            }
+            #reload::after{
+                content: '\f2f1';
             }
         }
     }

@@ -15,15 +15,15 @@
     <header>
         <div>
             <h1><span>JP</span>assword</h1>
-            <button id="theme">Themes</button>
+            <button id="dark"></button>
+            <button id="light"></button>
         </div>
-    </header>Copy
-    
+    </header>
     <section>
         <h2>Générez un mot de passe sécurisé</h2>
         
         <form action="" id="parameters">
-            <h3>Custom your parameters</h3>
+            <h3>Choisissez vos préférences</h3>
             <hr>
             <div class="flex">
                 <div id="options">
@@ -50,8 +50,8 @@
         <div id="output">
             <form action="">
                 <input type="text" spellcheck="false">
-                <button>Copy</button>
-                <button>Refresh</button>
+                <button id="copy"></button>
+                <button id="reload"></button>
             </form>
         </div>
     </section>
@@ -60,6 +60,7 @@
             &copy; JPassword 2021
         </p>
     </footer>
-    
+
+    <script src="./script.js"></script>
 </body>
 </html>

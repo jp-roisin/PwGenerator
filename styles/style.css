@@ -1,3 +1,10 @@
+:root {
+  --dark: #003049;
+  --light: #fff;
+  --outline: #D62828;
+  --grey: #c3c3c3;
+}
+
 *,
 *::after,
 *::before {
@@ -5,8 +12,12 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  color: #003049;
+  color: var(--dark);
   font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  background: var(--light);
 }
 
 header {
@@ -43,16 +54,31 @@ header h1 span {
 }
 
 header button {
-  display: inline-block;
-  background: #D62828;
-  color: #fff;
-  font-weight: 600;
-  font-size: 20px;
-  font-style: italic;
+  background: var(--outline);
   padding: .5rem 1rem;
-  border-radius: 14px;
+  border-radius: 10px;
   border: none;
   cursor: pointer;
+}
+
+header #light {
+  display: none;
+}
+
+header #dark::after,
+header #light::after {
+  color: #fff;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-size: 30px;
+}
+
+header #dark::after {
+  content: '\f186';
+}
+
+header #light::after {
+  content: '\f185';
 }
 
 section {
@@ -86,8 +112,8 @@ section h2 {
 
 section #parameters {
   width: 60%;
-  -webkit-box-shadow: 0 0 15px 5px lightgray;
-          box-shadow: 0 0 15px 5px lightgray;
+  -webkit-box-shadow: 0 0 15px 5px var(--grey);
+          box-shadow: 0 0 15px 5px var(--grey);
 }
 
 section #parameters h3 {
@@ -96,7 +122,7 @@ section #parameters h3 {
 }
 
 section #parameters hr {
-  background: #003049;
+  background: var(--dark);
   height: 2px;
   width: 80%;
   margin: 0 auto;
@@ -160,6 +186,7 @@ section #parameters #options > div {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 1rem;
 }
 
 section #parameters #options > div label {
@@ -171,25 +198,26 @@ section #parameters input[type=range] {
 }
 
 section #parameters input[type=range]::-moz-range-thumb {
-  background: #D62828;
+  background: var(--outline);
   border: none;
   scale: 150%;
 }
 
 section #parameters input[type=range]::-moz-range-track {
-  background: #003049;
+  background: var(--dark);
   height: 5px;
 }
 
-section #parameters input[type=checkbox]:checked {
-  scale: 150%;
-  color: red;
+section #parameters input[type=checkbox] {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
 }
 
 section #output {
   width: 60%;
-  -webkit-box-shadow: 0 0 15px 5px lightgray;
-          box-shadow: 0 0 15px 5px lightgray;
+  -webkit-box-shadow: 0 0 15px 5px var(--grey);
+          box-shadow: 0 0 15px 5px var(--grey);
   border-radius: 5px;
 }
 
@@ -209,8 +237,24 @@ section #output form input {
 }
 
 section #output form button {
+  background: var(--light);
   border: none;
-  background: #fff;
+  cursor: pointer;
+}
+
+section #output form #copy::after,
+section #output form #reload::after {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-size: 30px;
+}
+
+section #output form #copy::after {
+  content: '\f24d';
+}
+
+section #output form #reload::after {
+  content: '\f2f1';
 }
 
 footer {
