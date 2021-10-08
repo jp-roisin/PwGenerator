@@ -200,7 +200,7 @@ section #parameters input[type=range] {
 section #parameters input[type=range]::-moz-range-thumb {
   background: var(--outline);
   border: none;
-  scale: 150%;
+  scale: 200%;
 }
 
 section #parameters input[type=range]::-moz-range-track {
@@ -230,6 +230,7 @@ section #output form {
 
 section #output form * {
   height: 60px;
+  margin: 0 2px;
 }
 
 section #output form input {
@@ -240,6 +241,14 @@ section #output form button {
   background: var(--light);
   border: none;
   cursor: pointer;
+}
+
+section #output form #password {
+  text-align: center;
+  color: #003049;
+  background: #fff;
+  font-size: 28px;
+  font-weight: 500;
 }
 
 section #output form #copy::after,

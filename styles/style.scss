@@ -132,7 +132,7 @@ section{
             &::-moz-range-thumb{
                 background: var(--outline);
                 border: none;
-                scale: 150%; 
+                scale: 200%; 
             }
 
             &::-moz-range-track{
@@ -157,6 +157,7 @@ section{
             grid-template-columns: 8fr 1fr 1fr;
             *{
                 height: 60px;
+                margin: 0 2px;
             }
     
             input{
@@ -166,6 +167,13 @@ section{
                 background: var(--light);
                 border: none;
                 cursor: pointer;
+            }
+            #password{
+                text-align: center;
+                color: #003049;
+                background: #fff;
+                font-size: 28px;
+                font-weight: 500;
             }
             #copy::after,
             #reload::after{

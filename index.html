@@ -15,8 +15,8 @@
     <header>
         <div>
             <h1><span>JP</span>assword</h1>
-            <button id="dark"></button>
-            <button id="light"></button>
+            <button type='button' id="dark"></button>
+            <button type='button' id="light"></button>
         </div>
     </header>
     <section>
@@ -29,29 +29,29 @@
                 <div id="options">
                     <div>
                         <label for="caps">Majuscules</label>
-                        <input type="checkbox" name="caps">
+                        <input type="checkbox" name="caps" id="caps">
                     </div>
                     <div>
                         <label for="numbers">Chiffres</label>
-                        <input type="checkbox" name="numbers">
+                        <input type="checkbox" name="numbers" id="numbers">
                     </div>
                     <div>
                         <label for="special">Symboles</label>
-                        <input type="checkbox" name="special">
+                        <input type="checkbox" name="special" id="symbols">
                     </div>
                 </div>
                 <div id="range">
                     <small>Logueur du mot de passe :</small>
-                    <input type="range" value="12" min="1" max="50" oninput="this.nextElementSibling.value = this.value">
+                    <input type="range" value="12" min="1" max="50" oninput="this.nextElementSibling.value = this.value" id="passwordLength">
                     <output>12</output>
                 </div>
             </div>
         </form>
         <div id="output">
             <form action="">
-                <input type="text" spellcheck="false">
-                <button id="copy"></button>
-                <button id="reload"></button>
+                <input type="text" spellcheck="false" id="password" value="">
+                <button type='button' id="copy"></button>
+                <button type='button' id="reload"></button>
             </form>
         </div>
     </section>
@@ -61,6 +61,7 @@
         </p>
     </footer>
 
-    <script src="./script.js"></script>
+    <script src="./scripts/theme.js"></script>
+    <script src="./scripts/generator.js"></script>
 </body>
 </html>
