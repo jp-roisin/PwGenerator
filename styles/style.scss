@@ -101,6 +101,7 @@ section{
         }
         .flex{
             @include flex(row, center, space-around);
+            margin: 0 2rem;
         }
 
         #range,

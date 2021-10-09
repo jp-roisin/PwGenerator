@@ -142,6 +142,7 @@ section #parameters .flex {
   -webkit-box-align: space-around;
       -ms-flex-align: space-around;
           align-items: space-around;
+  margin: 0 2rem;
 }
 
 section #parameters #range,
