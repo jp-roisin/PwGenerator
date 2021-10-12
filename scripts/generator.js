@@ -1,10 +1,12 @@
 // Select DOM elements
 let password = document.querySelector('#password');
+let copy = document.querySelector('#copy');
 let refreshPw = document.querySelector('#reload');
 let capsCheckbox = document.querySelector('#caps');
 let numbersCheckbox = document.querySelector('#numbers');
 let symbolsCheckbox = document.querySelector('#symbols');
 let passwordLength = document.querySelector('#passwordLength');
+let message = document.querySelector('#message');
 
 // Checkbox Var
 var caps = false;
@@ -52,6 +54,21 @@ symbolsCheckbox.addEventListener('change', () =>{
     }
 });
 
+// ANIMATE REFRESH BUTTON
+let count = 0;
+refreshPw.addEventListener('click', () => {
+    count++;
+    degrees = count * 180;
+    refreshPw.style.transform = 'rotate(' + degrees + 'deg)';
+    refreshPw.style.transition = '.3s';
+});
+
+// COPY BUTTON
+copy.addEventListener('click', () => {
+    copyPWToClipBoard(password.value);
+    displayMessage();
+})
+
 // Make the Button refresh the PW
 refreshPw.addEventListener('click', () => {
     generatePassword(length, caps, numbers, symbols);
@@ -69,7 +86,7 @@ function generatePassword(length, caps, numbers, symbols) {
         charset += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     }
     if (numbers){
-        charset += "0123456789";
+        charset += "01234567890123456789";
     }
     if (symbols){
         charset += "!#$%&'()*+,-./:;<=>?@[\\]\"^_`{|}~";
@@ -79,4 +96,20 @@ function generatePassword(length, caps, numbers, symbols) {
     }
     password.value = retVal;
     return retVal;
+}
+
+
+// COPY THE PASSWORD TO CLIP BOARD
+function copyPWToClipBoard(passwordValue){
+    navigator.clipboard.writeText(passwordValue).then(function() {
+        console.log('Async: Copying to clipboard was successful!');
+      }, function(err) {
+        console.error('Async: Could not copy text: ', err);
+      });
+}
+
+// Display the message
+function displayMessage(){
+    message.style.display = 'inherit';
+    setTimeout(() => {message.style.display = 'none';}, 3500);
 }

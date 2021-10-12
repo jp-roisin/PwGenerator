@@ -3,7 +3,7 @@ let dark = document.querySelector('#dark');
 let light = document.querySelector('#light');
 let header = document.querySelector('header');
 
-let span = document.querySelector('themeContent');
+let span = document.querySelector('#themeContent');
 let root = document.querySelector(':root');
 
 
